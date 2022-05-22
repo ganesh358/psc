@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styels/home.css">
+</head>
+<body>
+    <h1>Masai School</h1>
+    <div id="navbar">
+        <div id="count"></div>
+
+        <p id="counter1"></p>
+        <br>
+        <p id="counter"></p>
+        <!-- <div id="counter2">Batch02 : 0</div> -->
+    </div>
+
+    <button onclick="dash()">Dashboard</button>
+
+    <div id="container">
+        <form onsubmit="form1(event)" id="masai">
+            <input type="text" id="name" placeholder="Enter name">
+            <!-- <select name="course" id="course">
+                <option value="DSA101">DSA101</option>
+                <option value="DSA201">DSA201</option>
+                <option value="DSA301">DSA301</option>
+                <option value="DSA401">DSA401</option>
+                <option value="DSA501">DSA501</option>
+            </select> -->
+            <input type="text" id="course" placeholder="Enter Course" >
+           <select name="unit" id="unit">
+               <option value="Unit-1">Unit-1</option>
+               <option value="Unit-2">Unit-2</option>
+               <option value="Unit-3">Unit-3</option>
+               <option value="Unit-4">Unit-4</option>
+               <option value="Unit-5">Unit-5</option>
+               <option value="Unit-6">Unit-6</option>
+           </select>
+          <!-- <div id="imgfile">Upload Image <input id="img1" type="file" accept=".gif,.jpg,.jpeg,.png,.doc,.docx" placeholder="Choose img"></div> -->
+          <input type="url" id="img1" placeholder="Image_Url">
+           <!-- <select name="batch" id="batch">
+               <option value="batch01">Batch-01</option>
+               <option value="batch02">Batch-02</option>
+           </select> -->
+           <input type="text" id="batch" placeholder="Enter Batch name">
+          <input type="submit">
+
+        </form>
+    </div>
+   
+
+</body>
+</html>
+<script src="/scripts/home.js"></script>
