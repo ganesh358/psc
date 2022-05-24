@@ -61,50 +61,10 @@ function calculate(){
          div1.append(p1);
 
      }
-    //  console.log(obj);
-    //  arr12.push(obj);
-    //  console.log(arr12)
-
-    //  localStorage.setItem("batches",JSON.stringify(arr12));
-    //  console.log(batches)
-      //arr2.push(obj);
-   // console.log(arr2)
-//    console.log("df",obj)
-//     const value = Object.values(obj);
-   
-//     const key = Object.keys(obj)
-//     console.log("keys",key)
-//     console.log("values",value)
+  
     
-    
-//     function Batch(obj){
-//         this.obj = obj;
-//         // this.values = value;
-        
-//     }
-   
-//     let obj1 = new Batch(obj)
-//     console.log("zjcb",obj1)
-    
-    
-//     arr2.push(obj1);
-//    console.log(arr2)
 
-//    arr2.forEach(function(el){
-//        let div = document.createElement("div");
 
-//        let p1 = document.createElement("p");
-//        p1.innerText = el.;
-
-//     //    let p2 = document.createElement("p");
-//     //    p2.innerText = ;
-   
-//        div.append(p1);
-
-//        document.querySelector("#count").append(div);
-       
-//    })
-     
 }
 
 
