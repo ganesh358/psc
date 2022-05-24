@@ -8,15 +8,7 @@ function Student(name ,course, unit, img1 , batch){
     
 }
  var arr = JSON.parse(localStorage.getItem("student")) || [];
-// var arr1 = JSON.parse(localStorage.getItem("student1")) || [];
-// var arr2 = JSON.parse(localStorage.getItem("student2")) || [];
 
-// let batch1 = arr1.length;
-// let batch2 = arr2.length;
-// console.log("ba",batch1)
-// document.querySelector("#counter1").innerText = `Batch01 : ${batch1}`;
-// document.querySelector("#counter2").innerText = `Batch02 : ${batch2}`;
-// console.log("bs",batch2)
 function form1(e){
       e.preventDefault();
       let form = document.getElementById("masai");
@@ -30,23 +22,9 @@ function form1(e){
         
        arr.push(p);
        localStorage.setItem("student", JSON.stringify(arr));
-       window.location.reload();
+       window.location.reload(); 
        
-       //console.log(arr)
-    //    if(batch == "batch01"){
-    //     arr1.push(p);
-    //          localStorage.setItem("student1", JSON.stringify(arr1));
-    //          window.location.reload();
-    //    }
-    //    else if(batch == "batch02"){
-    //     arr2.push(p)
-      
-    //     localStorage.setItem("student2", JSON.stringify(arr2));
-    //     window.location.reload();
-    //    }
-
-      
-       
+       console.log(arr)
 }
 
 
@@ -55,9 +33,12 @@ function dash(){
     window.location.href = "index.html"
 }
 
+
 function calculate(){
     var arr = JSON.parse(localStorage.getItem("student"))|| [];
     var arr2 = [];
+    console.log(arr)
+    
     var obj = {};
 
     for(var i=0;i<arr.length;i++){
@@ -71,53 +52,60 @@ function calculate(){
           obj[arr[i].batch]++;
      }  
 
-    // console.log(obj);
+     let div1 = document.getElementById("count");
+
+     for(key in obj){
+         let p1 = document.createElement("div");
+         p1.innerText = `${key} : ${obj[key]}`
+
+         div1.append(p1);
+
+     }
+    //  console.log(obj);
+    //  arr12.push(obj);
+    //  console.log(arr12)
+
+    //  localStorage.setItem("batches",JSON.stringify(arr12));
+    //  console.log(batches)
       //arr2.push(obj);
-    // console.log(arr2)
-    const value = Object.values(obj);
+   // console.log(arr2)
+//    console.log("df",obj)
+//     const value = Object.values(obj);
    
-    const key = Object.keys(obj)
-     arr2.push([key,value])
-     const arr3 = new Map([[key,value]]);
-
-     let text = "";
-     arr3.forEach (function(value,key) {
-   
-      
-          text += key.join(" ")+"="+value.join(" ")
-
-     });
-     
-      
-       
-
-  
-     
-      document.getElementById("counter").innerHTML = text;
-
+//     const key = Object.keys(obj)
+//     console.log("keys",key)
+//     console.log("values",value)
     
-     //  console.log(arr2)
-    //console.log(key)
+    
+//     function Batch(obj){
+//         this.obj = obj;
+//         // this.values = value;
+        
+//     }
+   
+//     let obj1 = new Batch(obj)
+//     console.log("zjcb",obj1)
+    
+    
+//     arr2.push(obj1);
+//    console.log(arr2)
 
-  //  console.log(value)  
-      // let text = "";
-      // let text2 = "";
-      // arr2.forEach (function(key,value) {
-      //   var div = document.createElement("div");
+//    arr2.forEach(function(el){
+//        let div = document.createElement("div");
 
-      //   var p1 = document.createElement("p");
-      //   p1.innerHTML = key;
+//        let p1 = document.createElement("p");
+//        p1.innerText = el.;
 
-      //   div.append(p1);
+//     //    let p2 = document.createElement("p");
+//     //    p2.innerText = ;
+   
+//        div.append(p1);
 
-      //   document.querySelector("#counter").append(div);
-      
-      // })
-      // console.log(text)
-  //  document.getElementById("counter").innerHTML = text;
-    //document.getElementById("counter").innerHTML = text2;
+//        document.querySelector("#count").append(div);
+       
+//    })
      
 }
 
-calculate()
 
+calculate()

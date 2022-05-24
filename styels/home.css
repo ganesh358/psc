@@ -46,3 +46,28 @@ select{
     margin-left: 28rem;
 }
 
+#count{
+    display: flex;
+    gap: 1rem;
+}
+
+#dashb{
+    margin-left: 20rem;
+    margin-top: 1rem;
+   width: 15rem;
+   height: 2rem;
+   font-size: 1.5rem;
+   background-color: black;
+   color: white;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+#upper{
+    display: flex;
+}
+
+#submit1{
+    font-size: 1.2rem;
+    cursor: pointer;
+}

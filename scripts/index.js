@@ -1,6 +1,6 @@
 var arr = JSON.parse(localStorage.getItem("student")) ||[] ;
 
-
+  
 arr.map(function(el,index){
     var tr = document.createElement("tr");
 
@@ -26,6 +26,7 @@ arr.map(function(el,index){
      var td6 = document.createElement("td");
      var  btn = document.createElement("button");
      btn.innerText = "Remove";
+     btn.setAttribute("id","remove")
      btn.addEventListener("click",function (){
           Removebtn(el,index);
      })
@@ -49,4 +50,10 @@ function Removebtn(el,index){
     localStorage.setItem("student",JSON.stringify(arr));
 
     window.location.reload();
+}
+
+
+
+function dash2(){
+    window.location.href = "home.html"
 }
